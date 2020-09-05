@@ -22,3 +22,4 @@ hunter_add_package(GTest)
 find_package(GTest CONFIG REQUIRED)
 
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/task1_exponentiation)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/task2_fibonacci)
