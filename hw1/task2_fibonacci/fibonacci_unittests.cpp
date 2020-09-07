@@ -6,7 +6,7 @@
 
 #include <fibonacci.h>
 
-const size_t benchNum = 10000;
+const size_t benchNum = 100000;
 
 size_t slowFibonacci(size_t N) {
     size_t N1 = 0;
@@ -70,14 +70,14 @@ TEST(Fibonacci, Bench) {
         c.RunSlow();
     }
     finish = std::chrono::high_resolution_clock::now();
-    auto slowDur = std::chrono::duration_cast<std::chrono::milliseconds>(finish - start);
+    auto slowDur = std::chrono::duration_cast<std::chrono::nanoseconds>(finish - start);
 
     start  = std::chrono::system_clock::now();
     for (const auto& c : cases) {
         c.RunFast();
     }
     finish = std::chrono::system_clock::now();
-    auto fastDur = std::chrono::duration_cast<std::chrono::milliseconds>(finish - start);
+    auto fastDur = std::chrono::duration_cast<std::chrono::nanoseconds>(finish - start);
 
     EXPECT_GT(slowDur.count(), fastDur.count());
     std::cout << "slow duration : " << slowDur.count() << std::endl;

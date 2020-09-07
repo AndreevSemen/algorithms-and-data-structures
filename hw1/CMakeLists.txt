@@ -23,3 +23,4 @@ find_package(GTest CONFIG REQUIRED)
 
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/task1_exponentiation)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/task2_fibonacci)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/task3_permutations)
