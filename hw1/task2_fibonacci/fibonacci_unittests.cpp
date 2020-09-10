@@ -26,11 +26,11 @@ struct Case {
     size_t Expected;
 
     void RunFast() const {
-        EXPECT_EQ(Expected, fibonacci(N));
+        EXPECT_EQ(Expected, fibonacci(N)) << "fast in " << N;
     }
 
     void RunSlow() const {
-        EXPECT_EQ(Expected, slowFibonacci(N));
+        EXPECT_EQ(Expected, slowFibonacci(N)) << "slow in " << N;
     }
 };
 

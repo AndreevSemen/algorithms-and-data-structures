@@ -5,7 +5,6 @@ target_include_directories(exponentiation
         PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
-
 add_executable(exponentiation_unittests
         exponentiation_unittests.cpp
 )
