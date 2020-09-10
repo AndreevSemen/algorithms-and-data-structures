@@ -4,6 +4,11 @@
 
 #include <reverse.h>
 
+template <typename T>
+bool operator!=(const List<T>& lhs, const List<T>& rhs) {
+    return !(lhs == rhs);
+}
+
 TEST(Reverse, Test) {
     List<size_t> list1;
     List<size_t> expected1;
