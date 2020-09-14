@@ -1,0 +1,5 @@
+set_size 1
+pop
+push 1
+print
+pop
